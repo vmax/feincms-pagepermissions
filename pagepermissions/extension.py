@@ -33,6 +33,7 @@ class Extension(extensions.Extension):
         #
         # Add custom fields to the admin class
         #
+        modeladmin.list_filter.append('permissions')
         modeladmin.add_extension_options(_('Permissions'), {
             'fields': ['permissions',],
         })
